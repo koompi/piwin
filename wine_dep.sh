@@ -1,0 +1,31 @@
+#!/bin/bash
+WINE_MAIN_DEPS=("desktop-file-utils"  
+                "fontconfig"  
+                "freetype2"  
+                "gettext"  
+                "glu"  
+                "lcms2"  
+                "libpcap"  
+                "libsm"  
+                "libxcursor"  
+                "libxdamage"  
+                "libxi"  
+                "libxml2"  
+                "libxrandr"  
+                "lib32-fontconfig"  
+                "lib32-freetype2"  
+                "lib32-gcc-libs"  
+                "lib32-gettext"  
+                "lib32-glu"  
+                "lib32-lcms2"  
+                "lib32-libpcap"  
+                "lib32-libsm"  
+                "lib32-libxcursor"  
+                "lib32-libxdamage"  
+                "lib32-libxi"  
+                "lib32-libxml2"  
+                "lib32-libxrandr" )
+for((i=0;i<${#WINE_MAIN_DEPS[@]};i++))
+do
+    echo -e "${WINE_MAIN_DEPS[$i]}"
+done;

@@ -7,9 +7,8 @@ SERVER_VERSION="${GET_VERSION[@]:9:5}"
 
 # Application list
 APP_LIST=(
+    'ms-office-2010'
     'ms-office-2013'
-    'ms-office-2016'
-    'adobe-photoshop'
 )
 
 # Color variables
@@ -155,6 +154,7 @@ install() {
         curl -# https://repo.koompi.org/piwin/${1}.tar.gz -o $DOWNLOAD_DIR/${1}.tar.gz
         cd $DOWNLOAD_DIR
         extract ${1}.tar.gz
+        cd $DOWNLOAD_DIR/${1}
         printf "${GREEN}Preparing to install ${1^^}\n";
     fi
 }
