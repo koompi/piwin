@@ -1,0 +1,193 @@
+#!/bin/bash
+
+# Application version
+LOCAL_VERSION="0.0.1"
+GET_VERSION=$(curl -s https://repo.koompi.org/piwin-bin | grep VERSION=)
+SERVER_VERSION="${GET_VERSION[@]:9:5}"
+
+# Application list
+APP_LIST=(
+    'ms-office-2013'
+    'ms-office-2016'
+    'adobe-photoshop'
+)
+
+# Color variables
+RED=$(tput setaf 1)
+GREEN=$(tput setaf 2)
+YELLOW=$(tput setaf 3)
+NORMAL=$(tput sgr0)
+
+# Working directories
+DOWNLOAD_DIR=$HOME/Downloads
+INSTALLATION_DIR=$HOME/.piwin
+
+semver_compare() {
+    local version_a version_b pr_a pr_b
+    # strip word "v" and extract first subset version (x.y.z from x.y.z-foo.n)
+    version_a=$(echo "${1//v/}" | awk -F'-' '{print $1}')
+    version_b=$(echo "${2//v/}" | awk -F'-' '{print $1}')
+    
+    if [ "$version_a" \= "$version_b" ]
+    then
+        # check for pre-release
+        # extract pre-release (-foo.n from x.y.z-foo.n)
+        pr_a=$(echo "$1" | awk -F'-' '{print $2}')
+        pr_b=$(echo "$2" | awk -F'-' '{print $2}')
+        
+        ####
+        # Return 0 when A is equal to B
+        [ "$pr_a" \= "$pr_b" ] && echo 0 && return 0
+        
+        ####
+        # Return 1
+        
+        # Case when A is not pre-release
+        if [ -z "$pr_a" ]
+        then
+            echo 1 && return 0
+        fi
+        
+        ####
+        # Case when pre-release A exists and is greater than B's pre-release
+        
+        # extract numbers -rc.x --> x
+        number_a=$(echo ${pr_a//[!0-9]/})
+        number_b=$(echo ${pr_b//[!0-9]/})
+        [ -z "${number_a}" ] && number_a=0
+        [ -z "${number_b}" ] && number_b=0
+        
+        [ "$pr_a" \> "$pr_b" ] && [ -n "$pr_b" ] && [ "$number_a" -gt "$number_b" ] && echo 1 && return 0
+        
+        ####
+        # Retrun -1 when A is lower than B
+        echo -1 && return 0
+    fi
+    arr_version_a=(${version_a//./ })
+    arr_version_b=(${version_b//./ })
+    cursor=0
+    # Iterate arrays from left to right and find the first difference
+    while [ "$([ "${arr_version_a[$cursor]}" -eq "${arr_version_b[$cursor]}" ] && [ $cursor -lt ${#arr_version_a[@]} ] && echo true)" == true ]
+    do
+        cursor=$((cursor+1))
+    done
+    [ "${arr_version_a[$cursor]}" -gt "${arr_version_b[$cursor]}" ] && echo 1 || echo -1
+}
+
+extract() {
+    archive="$1"
+    
+    originalsize=$(file $archive | rev | cut -d' ' -f1 | rev)
+    step=100
+    blocks=$(echo "$originalsize / 512 / 20 / $step" | bc)
+    
+    tar -xz --checkpoint=$step --totals \
+    --checkpoint-action="exec='p=\$(echo "\$TAR_CHECKPOINT/$blocks" | bc -l);printf \"Extracting package: %.4f%%\r\" \$p'" \
+    -f $archive
+}
+
+version() {
+    printf "PiWin $LOCAL_VERSION by KOOMPI\n"
+}
+
+update() {
+    
+    RESULT=$(semver_compare ${SERVER_VERSION} ${LOCAL_VERSION})
+    
+    if [[ $RESULT -eq 0 ]]; then
+        printf "${GREEN}No update available.\nYou already have the latest PiWin version installed.\n";
+    fi
+    
+    if [[ $RESULT -lt 0 ]]; then
+        printf "${RED}You version is ahead of release\n${NORMAL}Local: $LOCAL_VERSION > Sever: $SERVER_VERSION\n";
+    fi
+    
+    if [[ $RESULT -gt 0 ]]; then
+        printf "${YELLOW}Update Available\n${NORMAL}Local: $LOCAL_VERSION > Sever: $SERVER_VERSION\n";
+    fi
+}
+
+list() {
+    
+    for((i=0;i<${#APP_LIST[@]};i++))
+    do
+        if [[ i -eq 0 ]]; then
+            printf "${GREEN}\n"
+            printf "%s \x1d %s \x1d %s \x1d %s \x1d\n" "NO" "APPLICATION" "INSTALL" "REMOVE";
+            printf "${NORMAL}\n"
+        fi
+        printf "%d \x1d %s \x1d %s \x1d %s \x1d\n" $((i + 1)) ${APP_LIST[$i]} "piwin -i ${APP_LIST[$i]}" "piwin -r ${APP_LIST[$i]}";
+    done | column -t -s$'\x1d'
+    printf "\n"
+    
+}
+
+install() {
+    
+    exist=0
+    
+    for((i=0;i<${#APP_LIST[@]};i++))
+    do
+        if [[ $1 == ${APP_LIST[$i]} ]]; then
+            exist=1
+            break;
+        fi
+    done;
+    
+    if [[ $exist == 0 ]]; then
+        SIMILAR=$(list | grep -c $1);
+        printf "\n"
+        if [[ $SIMILAR -gt 0 ]]; then
+            printf "${RED}\"$1\" is incorrect or unavailable for now\n";
+            printf "Here are similar apps:\n${NORMAL}";
+            list | grep $1
+        fi
+        
+        if [[ $SIMILAR -eq 0 ]]; then
+            printf "${RED}\"$1\" ${NORMAL}is incorrect or unavailable for now.\n";
+            printf "Request this app at KOOMPI Telegram community at:${GREEN} \nhttps://t.me/koompi${NORMAL}\n";
+            printf "Checkout all available apps below\n";
+            list;
+        fi
+    fi
+    if [[ $exist == 1 ]]; then
+        printf "${GREEN}Dowloading ${1^^} ${NORMAL}\n";
+        curl -# https://repo.koompi.org/piwin/${1}.tar.gz -o $DOWNLOAD_DIR/${1}.tar.gz
+        cd $DOWNLOAD_DIR
+        extract ${1}.tar.gz
+        printf "${GREEN}Preparing to install ${1^^}\n";
+    fi
+}
+
+remove() {
+    echo removing $1
+}
+
+case "$1" in
+    l | list | -l | --list)
+        list
+    ;;
+    
+    i | install | -i | --install)
+        install $2
+    ;;
+    
+    r | remove)
+        remove $2
+    ;;
+    
+    u | update | -u | --update)
+        update $2
+    ;;
+    
+    v | version | -v | --version)
+        version
+    ;;
+    
+    *)
+        echo "Usage: $0 {start|stop|ssh}"
+    ;;
+    
+esac
+
+
