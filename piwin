@@ -1,25 +1,109 @@
 #!/bin/bash
 
-# Application version
+# Application version --------------------------------------------------------------
 LOCAL_VERSION="0.0.1"
 GET_VERSION=$(curl -s https://repo.koompi.org/piwin-bin | grep VERSION=)
 SERVER_VERSION="${GET_VERSION[@]:9:5}"
 
-# Application list
+# Application list -----------------------------------------------------------------
 APP_LIST=(
     'ms-office-2010'
     'ms-office-2013'
 )
 
-# Color variables
+# Color variables ------------------------------------------------------------------
 RED=$(tput setaf 1)
 GREEN=$(tput setaf 2)
 YELLOW=$(tput setaf 3)
 NORMAL=$(tput sgr0)
 
-# Working directories
+# Working directories --------------------------------------------------------------
+REPO_ADDR="https://repo.koompi.org"
+WINE_NAME="wine-stable-4.0.2-1-x86_64.pkg.tar.xz"
 DOWNLOAD_DIR=$HOME/Downloads
 INSTALLATION_DIR=$HOME/.piwin
+
+# Dependencies ---------------------------------------------------------------------
+
+WINE_DEPS=( "desktop-file-utils"  
+            "fontconfig"  
+            "freetype2"  
+            "gettext"  
+            "glu"  
+            "lcms2"  
+            "libpcap"  
+            "libsm"  
+            "libxcursor"  
+            "libxdamage"  
+            "libxi"  
+            "libxml2"  
+            "libxrandr"  
+            "lib32-fontconfig"  
+            "lib32-freetype2"  
+            "lib32-gcc-libs"  
+            "lib32-gettext"  
+            "lib32-glu"  
+            "lib32-lcms2"  
+            "lib32-libpcap"  
+            "lib32-libsm"  
+            "lib32-libxcursor"  
+            "lib32-libxdamage"  
+            "lib32-libxi"  
+            "lib32-libxml2"  
+            "lib32-libxrandr"
+            "alsa-lib" 
+            "alsa-plugins" 
+            "cups" 
+            "dosbox" 
+            "giflib" 
+            "gnutls" 
+            "gsm" 
+            "gst-plugins-base-libs" 
+            "libgphoto2" 
+            "libjpeg-turbo" 
+            "libldap" 
+            "libpng" 
+            "libpulse" 
+            "libxcomposite" 
+            "libxinerama" 
+            "libxslt" 
+            "mpg123" 
+            "ncurses" 
+            "ocl-icd" 
+            "openal" 
+            "samba" 
+            "sane" 
+            "sdl2" 
+            "v4l-utils" 
+            "vkd3d" 
+            "vulkan-icd-loader" 
+            "lib32-alsa-lib" 
+            "lib32-alsa-plugins" 
+            "lib32-giflib" 
+            "lib32-gnutls" 
+            "lib32-gst-plugins-base-libs" 
+            "lib32-libjpeg-turbo" 
+            "lib32-libldap" 
+            "lib32-libpng" 
+            "lib32-libpulse" 
+            "lib32-libxcomposite" 
+            "lib32-libxinerama" 
+            "lib32-libxslt" 
+            "lib32-mpg123" 
+            "lib32-ncurses" 
+            "lib32-ocl-icd" 
+            "lib32-openal" 
+            "lib32-sdl2" 
+            "lib32-v4l-utils" 
+            "lib32-vkd3d" 
+            "lib32-vulkan-icd-loader" 
+            "wine-mono" 
+            "wine_gecko" 
+            "winetricks" );
+
+MISSING_DEPS="";
+
+# Functions -----------------------------------------------------------------------
 
 semver_compare() {
     local version_a version_b pr_a pr_b
@@ -73,6 +157,49 @@ semver_compare() {
     [ "${arr_version_a[$cursor]}" -gt "${arr_version_b[$cursor]}" ] && echo 1 || echo -1
 }
 
+check_deps() {
+    MISSING_NUM=0
+    FOUND_NUM=0
+
+    echo -e "Checking runtime version:"
+    pacman -Qi --color always wine-stable &> /dev/null;
+    if [ $? -ne 0 ] ; then
+        echo -e "${RED}[no] Runtime version is invalid.${NORMAL}\n"
+        echo -e "${YELLOW}=> Downloading runtime software....${NORMAL}"
+        curl -# $REPO_ADDR/$WINE_NAME -o $DOWNLOAD_DIR/$WINE_NAME
+        yes | sudo pacman -U $DOWNLOAD_DIR/$WINE_NAME;
+    else
+        echo -e "${GREEN}[ok] Runtime version is valid.${NORMAL}\n"
+    fi;
+
+    for((i=0;i<${#WINE_DEPS[@]};i++))
+    do
+        NUM=$(( i + 1 ))
+        echo -ne "Checking Dependencies:${YELLOW} $(( $NUM * 100 / ${#WINE_DEPS[@]}))%${NORMAL}\033[0K\r";
+        pacman -Qi --color always "${WINE_DEPS[$i]}" &> /dev/null;
+        if [ $? -eq 0 ] ; then
+            ((FOUND_NUM++))
+        else
+            ((MISSING_NUM++))
+            MISSING_DEPS+=" ${WINE_DEPS[$i]}"
+        fi;
+    done;
+
+    if [[ $MISSING_NUM -gt 0 ]]; then
+        echo -e ""
+        echo -e "${RED}[no] Some Problems Found.${NORMAL}\n"
+        echo -e "Dependencies Found: \t${GREEN}${FOUND_NUM}${NORMAL}"
+        echo -e "Dependencies Missing: \t${RED}${MISSING_NUM}${NORMAL}"
+        echo -e "Installing Missing Dependencies:\n"
+        sudo pacman -S --noconfirm $MISSING_DEPS
+    else
+        echo -e ""
+        echo -e "${GREEN}[ok] No Problems Found.${NORMAL}\n"
+        echo -e "Dependencies Found: \t${GREEN}${FOUND_NUM}${NORMAL}"
+        echo -e "Dependencies Missing: \t${RED}${MISSING_NUM}${NORMAL}\n"
+    fi;
+}
+
 extract() {
     archive="$1"
     
@@ -92,7 +219,9 @@ version() {
 update() {
     
     RESULT=$(semver_compare ${SERVER_VERSION} ${LOCAL_VERSION})
-    
+
+    check_deps
+
     if [[ $RESULT -eq 0 ]]; then
         printf "${GREEN}No update available.\nYou already have the latest PiWin version installed.\n";
     fi
@@ -124,7 +253,8 @@ list() {
 install() {
     
     exist=0
-    
+    check_deps
+
     for((i=0;i<${#APP_LIST[@]};i++))
     do
         if [[ $1 == ${APP_LIST[$i]} ]]; then
@@ -143,19 +273,39 @@ install() {
         fi
         
         if [[ $SIMILAR -eq 0 ]]; then
-            printf "${RED}\"$1\" ${NORMAL}is incorrect or unavailable for now.\n";
-            printf "Request this app at KOOMPI Telegram community at:${GREEN} \nhttps://t.me/koompi${NORMAL}\n";
-            printf "Checkout all available apps below\n";
+            echo -e "${RED}\"$1\" ${NORMAL}is incorrect or unavailable for now.";
+            echo -e "Request this app at KOOMPI Telegram community at:${GREEN} \nhttps://t.me/koompi${NORMAL}";
+            echo -e "Checkout all available apps below\n";
             list;
         fi
     fi
+
+    check_pkg_exist=$(curl -I $REPO_ADDR/piwin/${1}.tar.gz 2>/dev/null | head -n 1 | cut -d$' ' -f2)
+
     if [[ $exist == 1 ]]; then
-        printf "${GREEN}Dowloading ${1^^} ${NORMAL}\n";
-        curl -# https://repo.koompi.org/piwin/${1}.tar.gz -o $DOWNLOAD_DIR/${1}.tar.gz
-        cd $DOWNLOAD_DIR
-        extract ${1}.tar.gz
-        cd $DOWNLOAD_DIR/${1}
-        printf "${GREEN}Preparing to install ${1^^}\n";
+
+        if [[ $check_pkg_exist == 200 ]]; then
+        
+            echo -e "${GREEN}Dowloading ${1^^} ${NORMAL}";
+            curl -# $REPO_ADDR/piwin/${1}.tar.gz -o $DOWNLOAD_DIR/${1}.tar.gz
+            cd $DOWNLOAD_DIR
+            extract ${1}.tar.gz
+            cd $DOWNLOAD_DIR/${1}
+            echo -e "${GREEN}Preparing to install ${1^^} ${NORMAL}";
+            chmod +x $DOWNLOAD_DIR/${1}/installer.sh
+            $(which bash) cd $DOWNLOAD_DIR/${1}/installer.sh
+
+        elif [[ $check_pkg_exist == 404 ]]; then
+
+            echo -e "${RED}[404] Package not found";
+        
+        else
+
+            echo -e "${RED}[${check_pkg_exist}] Error! Something went wrong on the server side.${NORMAL}"
+            echo -e "${YELLOW}Please try again in a few minutes later.${NORMAL}"
+            echo -e "${GREEN}If the problem still persists please let us know at: https://t.me/koompi"
+
+        fi;
     fi
 }
 
@@ -167,27 +317,19 @@ case "$1" in
     l | list | -l | --list)
         list
     ;;
-    
     i | install | -i | --install)
         install $2
     ;;
-    
-    r | remove)
+    r | remove | -r | --remove)
         remove $2
     ;;
-    
     u | update | -u | --update)
         update $2
     ;;
-    
     v | version | -v | --version)
         version
     ;;
-    
     *)
-        echo "Usage: $0 {start|stop|ssh}"
-    ;;
-    
+        echo -e "Usage: ${0} {start|stop|ssh}"
+        exit 1
 esac
-
-

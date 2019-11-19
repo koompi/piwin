@@ -1,13 +1,26 @@
 #!/bin/bash
+# Color variables
+RED=$(tput setaf 1)
+GREEN=$(tput setaf 2)
+YELLOW=$(tput setaf 3)
+NORMAL=$(tput sgr0)
 
-# isPackageInstalled() {
-#   pacman -Qi "$1" &> /dev/null
-#   echo $?
-# }
-# if [ $(isPackageInstalled 'code') ]; then 
-#     # do things here
-#     echo 'Package libssl is installed'
-# fi
+WINE_DEPS=('atom' 'pcmanfm')
+MISSING_DEPS="";
 
-pacman -Qi "$1" &> /dev/null
-echo $?
+
+for((i=0;i<${#WINE_DEPS[@]};i++))
+do
+    sudo pacman -Qi --color always "${WINE_DEPS[$i]}" &> /dev/null;
+    if [ $? -eq 0 ] ; then
+        echo -e "${GREEN}[ok] ${WINE_DEPS[$i]^} Found${NORMAL}";
+    else
+        echo -e "${RED}[no] ${WINE_DEPS[$i]^} Not Found${NORMAL}";
+        MISSING_DEPS+=" ${WINE_DEPS[$i]}"
+    fi;
+done;
+
+if [[ -n $MISSING_DEPS ]]; then
+    echo -e "Installing missing packages..."
+    sudo pacman -S --noconfirm $MISSING_DEPS
+fi;

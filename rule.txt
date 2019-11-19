@@ -1,0 +1,500 @@
+   44   cd '/home/brilliant/Downloads/Torrents/Microsoft Office Professional 2013 Pre-Activated/Microsoft Office Professional Plus 2013'
+   45  WINEPREFIX=$HOME/.piwin/win32 wine $(pwd)/setup.exe
+   46  WINEPREFIX=$HOME/.piwin/win32 wine /home/brilliant/Downloads/Torrents/Microsoft\ Office\ Professional\ 2013\ Pre-Activated/Microsoft\ Office\ Professional\ Plus\ 2013/setup.exe 
+   47  WINEARCH=win32 WINEPREFIX=/home/brilliant/.piwin/win32/ wine /home/brilliant/Downloads/Torrents/Microsoft\ Office\ Professional\ 2013\ Pre-Activated/Microsoft\ Office\ Professional\ Plus\ 2013/setup.exe 
+   48  cd ..
+   49  cd ..
+   50  WINEARCH=win32 WINEPREFIX=/home/brilliant/.piwin/win32/ wine /home/brilliant/Downloads/Torrents/Microsoft\ Office\ Professional\ Plus\ 2016\ 32_64\ Bit\ +\ ACTIVATED/en_office_professional_plus_2016_x86_x64/setup.exe 
+   51  WINEARCH=win32 WINEPREFIX=/home/brilliant/.piwin/win32/ wine /home/brilliant/Downloads/Torrents/Microsoft\ Office\ Professional\ Plus\ 2016\ 32_64\ Bit\ +\ ACTIVATED/en_office_professional_plus_2016_x86_x64/office/setup32.exe 
+   52  WINEARCH=win32 WINEPREFIX=/home/brilliant/.piwin/office_2013 wine /home/brilliant/Downloads/Torrents/Microsoft\ Office\ Professional\ Plus\ 2016\ 32_64\ Bit\ +\ ACTIVATED/KMSAuto\ Net\ 2015\ v1.3.8\ Portable/KMSAuto\ Net.exe 
+   53  WINEARCH=win32 WINEPREFIX=/home/brilliant/.piwin/win32/ wine /home/brilliant/Downloads/Torrents/MICROSOFT\ Office\ PRO\ Plus\ 2016\ v16.0.4266.1003\ RTM\ +\ Activator\ \[TechTools.NET\]/MICROSOFT\ Office\ PRO\ Plus\ 2016\ v16.0.4266.1003\ RTM\ +\ Activator\ \[TechTools.NET\]/MICROSOFT\ Office\ PRO\ Plus\ 2016\ v16.0.4266.1003\ RTM\ +\ Activator\ \[TechTools.NET\]/setup.exe 
+   54  WINEARCH=win32 WINEPREFIX=/home/brilliant/.piwin/win32/ wine /home/brilliant/Downloads/Torrents/MICROSOFT\ Office\ PRO\ Plus\ 2016\ v16.0.4266.1003\ RTM\ +\ Activator\ \[TechTools.NET\]/MICROSOFT\ Office\ PRO\ Plus\ 2016\ v16.0.4266.1003\ RTM\ +\ Activator\ \[TechTools.NET\]/MICROSOFT\ Office\ PRO\ Plus\ 2016\ v16.0.4266.1003\ RTM\ +\ Activator\ \[TechTools.NET\]/office/setup32.exe 
+   55  clear
+   56  sudo umount /mnt 
+   57  sudo mount -o loop Microsoft\ Office\ Professional\ Plus\ 2016\ 32_64\ Bit\ +\ ACTIVATED/en_office_professional_plus_2016_x86_x64.iso /mnt
+   58  WINEARCH=win32 WINEPREFIX=/home/brilliant/.piwin/win32/ wine /home/brilliant/Downloads/Torrents/Microsoft\ Office\ 2016\ Standard\ Sept.2017\ +\ Pre-Cracked\ -\ \[CrackzSoft\]/Microsoft.Office.Standard.2016x86.v2017.09.exe 
+   59  WINEARCH=win32 WINEPREFIX=/home/brilliant/.piwin/office_2013 wine /home/brilliant/Downloads/Torrents/Microsoft\ Office\ 2016\ Standard\ Sept.2017\ +\ Pre-Cracked\ -\ \[CrackzSoft\]/Microsoft.Office.Standard.2016x86.v2017.09.exe 
+   60  WINEARCH=win32 WINEPREFIX=/home/brilliant/.piwin/office_2013 wine /home/brilliant/Downloads/Torrents/KMSpico\ 10.2.0\ FINAL\ +\ Portable\ \(Office\ and\ Windows\ 10\ Activator\)\ \[TechTools\]/KMSpico\ 10.2.0\ FINAL\ +\ Portable\ \(Office\ and\ Windows\ 10\ Activator\)\ \[TechTools.NET\]/KMSpico\ Portable/AutoPico.exe 
+   61  WINEARCH=win32 WINEPREFIX=/home/brilliant/.piwin/office_2013 wine /home/brilliant/Downloads/Torrents/KMSpico\ 10.2.0\ FINAL\ +\ Portable\ \(Office\ and\ Windows\ 10\ Activator\)\ \[TechTools\]/KMSpico\ 10.2.0\ FINAL\ +\ Portable\ \(Office\ and\ Windows\ 10\ Activator\)\ \[TechTools.NET\]/KMSpico\ Portable/KMSELDI.exe 
+   62  WINEARCH=win32 WINEPREFIX=/home/brilliant/.piwin/office_2013 wine /home/brilliant/Downloads/Torrents/KMSpico\ 10.2.0\ FINAL\ +\ Portable\ \(Office\ and\ Windows\ 10\ Activator\)\ \[TechTools\]/KMSpico\ 10.2.0\ FINAL\ +\ Portable\ \(Office\ and\ Windows\ 10\ Activator\)\ \[TechTools.NET\]/KMSpico\ Install/KMSpico_setup.exe 
+   63   cd /run/media/brilliant/Brilliant
+   64   cd /run/media/brilliant/Brilliant/Tutorials
+   65   cd /run/media/brilliant/Brilliant
+   66   cd /run/media/brilliant/Brilliant/Wine
+   67   cd /home/brilliant/Downloads
+   68   cd /home/brilliant/Downloads/Torrents
+   69   cd /home/brilliant/Downloads
+   70   cd /run/media/brilliant/Brilliant
+   71   cd /run/media/brilliant/Brilliant/Wine
+   72   cd /run/media/brilliant/Brilliant
+   73   cd /home/brilliant/Downloads
+   74   cd /run/media/brilliant/Brilliant/Wine
+   75   cd /home/brilliant/Documents
+   76   cd /home/brilliant/Downloads
+   77   cd /home/brilliant/Downloads/Torrents
+   78  sudo mount -o loop Microsoft\ Office\ 2016/en_office_professional_plus_2016_x86_x64_dvd_6962141.iso /mnt
+   79  WINEARCH=win32 WINEPREFIX=/home/brilliant/.piwin/office_2013 wine /mnt/setup.exe 
+   80  WINEARCH=win32 WINEPREFIX=/home/brilliant/.piwin/office_2013 wine /mnt/office/setup32.exe 
+   81  WINEARCH=win32 WINEPREFIX=/home/brilliant/.piwin/office_2013 wine /home/brilliant/Downloads/Torrents/Microsoft\ Office\ 2016/activate/Re-LoaderByR@1n.exe 
+   82   cd /run/media/brilliant/Brilliant
+   83   cd /run/media/brilliant/Brilliant/Wine
+   84   cd /run/media/brilliant/Brilliant/Wine/windows_software
+   85   cd /run/media/brilliant/Brilliant/Wine
+   86   cd /run/media/brilliant/Brilliant/Wine/CrossOver_17.0.0
+   87   cd /home/brilliant/Documents
+   88   cd /home/brilliant/Downloads
+   89   cd /home/brilliant
+   90   cd /home/brilliant/.piwin
+   91   cd /home/brilliant/.piwin/office_2013
+   92   cd /home/brilliant/.piwin/office_2013/drive_c
+   93   cd '/home/brilliant/.piwin/office_2013/drive_c/Program Files'
+   94   cd /home/brilliant/Downloads/Compressed
+   95   clear
+   96  cp -r JXII-V.10.6\ Client /home/brilliant/.piwin/office_2013/drive_c/Program\ Files/
+   97  env WINEPREFIX=/home/brilliant/.piwin/office_2013 WINEARCH=win32 wine /home/brilliant/Downloads/Compressed/JXII-V.10.6\ Client/SO2Game.exe 
+   98  env WINEPREFIX=/home/brilliant/.piwin/office_2013 WINEARCH=win32 wine /home/brilliant/Downloads/Compressed/JXII-V.10.6\ Client/SO2Game.exe 
+   99  env WINEPREFIX=/home/brilliant/.piwin/office_2013 WINEARCH=win32 wine /home/brilliant/Downloads/Compressed/JXII-V.10.6\ Client/Update/Jxonline2.exe 
+  100  WINEARCH=win32 WINEPREFIX=/home/brilliant/.piwin/office_2013 wine control.exe
+  101  WINEARCH=win32 WINEPREFIX=/home/brilliant/.piwin/office_2013 wine control KEYBOARD
+  102  pwd
+  103  ls -la
+  104  find .piwin/office_2013 
+  105  WINEARCH=win32 WINEPREFIX=/home/brilliant/.piwin/office_2013 wine control
+  106  WINEARCH=win32 WINEPREFIX=/home/brilliant/.piwin/office_2013 wine control.exe
+  107  WINEARCH=win32 WINEPREFIX=/home/brilliant/.piwin/office_2013 winetricks 
+  108  WINEPREFIX=/home/brilliant/.piwin/office_2013 winetricks 
+  109  WINEPREFIX=/home/brilliant/.piwin/office_2013 winetricks 
+  110  WINEPREFIX=/home/brilliant/.piwin/office_2013 winetricks 
+  111  cd projects
+  112  clear
+  113  cd piwin/
+  114  cler
+  115  clear
+  116  code .
+  117  cd ..
+  118  cd piwin/
+  119  ls -la
+  120  rm -rf office_2013 office_2013.sh desktop_files/
+  121  clear
+  122  ls -la
+  123  rm -rf wine-stable-4.0.2-1-x86_64.pkg.tar.xz 
+  124  clear
+  125  ls -la
+  126  git init
+  127  git remote add origin https://github.com/koompi/piwin.git
+  128  git add .
+  129  git commit -m "first commit"
+  130  git push -u origin master
+  131  clear
+  132  cd 
+  133  clear
+  134  rm -rf .piwin/
+  135  ls -la
+  136  rm -rf office_2013
+  137  rm -rf office_2013.sh 
+  138  clear
+  139  rm -rf office_2013.sh 
+  140  ls -la
+  141  chmod +x check_if_package_installed.sh 
+  142  ./check_if_package_installed.sh 
+  143  clear
+  144  ./check_if_package_installed.sh 
+  145  pacman -Qs firefox
+  146  clear
+  147  pacman -Qs firefox > /dev/null
+  148  pacman -Qs code > /dev/null
+  149  pacman -Qs code
+  150  pacman -Qs visual-studio-code
+  151  pacman -Qs visual-studio-code > /dev/null
+  152  clear
+  153  ./check_if_package_installed.sh 
+  154  clear
+  155  ./check_if_package_installed.sh 
+  156  ./check_if_package_installed.sh 
+  157  which code
+  158  clear
+  159  ./check_if_package_installed.sh 
+  160  clear
+  161  ./check_if_package_installed.sh 
+  162  clear
+  163  ./check_if_package_installed.sh 
+  164  ./check_if_package_installed.sh 
+  165  ./check_if_package_installed.sh 
+  166  clear
+  167  ./check_if_package_installed.sh 
+  168  clear
+  169  ./check_if_package_installed.sh 
+  170  ./check_if_package_installed.sh 
+  171  clear
+  172  ./check_if_package_installed.sh 
+  173  clear
+  174  ./check_if_package_installed.sh 
+  175   cd /home/brilliant
+  176   clear
+  177   cd /home/brilliant/projects
+  178   cd /home/brilliant/projects/pisw
+  179  code .
+  180  cd ..
+  181  cp pisw/* piwin/
+  182  clear
+  183  rm -rf aoo/
+  184  rm -rf pi
+  185  rm -rf pisw/
+  186  rm -rf servo/
+  187  rm -rf spacing/
+  188  cd wine/
+  189  code .
+  190  cd ..
+  191  rm -rf wine/
+  192  clear
+  193  rm -rf vanillajs-spa/
+  194  clear
+  195  cd ..
+  196  cd Pictures/
+  197  clear
+  198  rm -rf todos/
+  199   cd /home/brilliant
+  200   cd /home/brilliant/Documents
+  201  cat mwf_config 
+  202  rm -rf mwf_config 
+  203  cd ..
+  204  rm -rf AndroidStudioProjects/
+  205  rm -rf piwin-bin 
+  206  rm -rf .android/
+  207  rm -rf .AndroidStudio3.5/
+  208  rm -rf .jack-se*
+  209  yay -R wps-office-stable 
+  210  rm -rf .kingsoft/
+  211  yay -R openoffice 
+  212  rm -rf .openoffice/
+  213  yay -R phoenicis-playonlinux 
+  214  rm -rf .org.phoenicis.javafx.JavaFXApplication/
+  215  rm -rf .Phoenicis/
+  216  rm -rf .projectlibre/
+  217  cd Downloads/
+  218  ls -la
+  219  rm -rf *.jpg
+  220   cd /home/brilliant/Documents
+  221   cd /home/brilliant/Downloads
+  222  rm -rf Compressed/JXII-V.10.6\ Client*
+  223  rm -rf Compressed/*
+  224  rm -rf DR_PCE_AC55BT_B1_Wifi
+  225  rm -rf DR_PCE_AC55BT_B1_Wifi*
+  226  rm -rf _Getintopc.com_Office.Tool.Plus.7.2.1.1.rar 
+  227  rm -rf Sweet/
+  228  rm -rf slwga/
+  229  rm -rf office_2013/
+  230  rm -rf Kvantum.tar
+  231  rm -rf Fluent-*
+  232  rm -rf ECMA-376\,\ Fifth\ Edition\,\ Part\ 1\ -\ Fundamentals\ And\ Markup\ Language\ Reference.zip 
+  233   cd /run/media/brilliant/Brilliant
+  234   cd /run/media/brilliant/Brilliant/Wine
+  235   cd /run/media/brilliant/Brilliant
+  236   cd /home/brilliant/Downloads
+  237  rm -rf RedAlert3Demo.exe 
+  238  rm -rf ms-office-2013.tar.gz 
+  239  rm -rf Kvantum.tar.gz 
+  240   cd /home/brilliant
+  241   cd /run/media/brilliant/Brilliant
+  242   cd /home/brilliant
+  243   cd /home/brilliant/Documents
+  244   cd /home/brilliant/Downloads
+  245   cd /home/brilliant/Documents
+  246   cd /home/brilliant
+  247   cd /run/media/brilliant/Brilliant
+  248   cd /run/media/brilliant/Brilliant/Software
+  249   cd /run/media/brilliant/Brilliant/Software/Linux
+  250   cd /run/media/brilliant/Brilliant/Software
+  251   cd /run/media/brilliant/Brilliant
+  252   cd /home/brilliant
+  253   cd /home/brilliant/Downloads
+  254   cd /home/brilliant
+  255   cd /home/brilliant/Projects
+  256   cd /run/media/brilliant/Brilliant
+  257   cd /run/media/brilliant/Brilliant/Software
+  258   cd /run/media/brilliant/Brilliant/Software/Linux
+  259   cd /run/media/brilliant/Brilliant/Software
+  260   cd /run/media/brilliant/Brilliant/Software/Linux
+  261   cd /run/media/brilliant/Brilliant/Software/Linux/Wine
+  262   cd /run/media/brilliant/Brilliant/Software/Linux
+  263   cd /run/media/brilliant/Brilliant/Software
+  264   cd /run/media/brilliant/Brilliant/Software/Wine
+  265   cd /run/media/brilliant/Brilliant/Software
+  266   cd /run/media/brilliant/Brilliant
+  267   cd /home/brilliant/Downloads
+  268   cd /run/media/brilliant/Brilliant
+  269   cd /home/brilliant/Projects
+  270   cd /run/media/brilliant/Brilliant
+  271   cd /run/media/brilliant/Brilliant/Software
+  272   cd /home/brilliant/Downloads
+  273   cd /run/media/brilliant/Brilliant/Software
+  274   cd /run/media/brilliant/Brilliant/Software/Wine
+  275   cd /run/media/brilliant/Brilliant/Software/Wine/Windows
+  276   cd /home/brilliant/Downloads
+  277   cd /run/media/brilliant/Brilliant/Software/Wine
+  278   cd /run/media/brilliant/Brilliant/Software/Wine/Linux
+  279   cd /run/media/brilliant/Brilliant/Software/Wine
+  280   cd /home/brilliant/Downloads
+  281   cd /run/media/brilliant/Brilliant/Software/Wine
+  282   cd /home/brilliant/Downloads
+  283   cd /run/media/brilliant/Brilliant/Software/Wine
+  284   cd /home/brilliant/Downloads
+  285   cd /run/media/brilliant/Brilliant/Software/Wine
+  286   cd /home/brilliant/Downloads
+  287   cd /home/brilliant
+  288   cd /run/media/brilliant/Brilliant/Software/Wine
+  289   cd /run/media/brilliant/Brilliant/Software
+  290   cd /run/media/brilliant/Brilliant/Software/Wine
+  291   cd /home/brilliant
+  292   cd /home/brilliant/Downloads
+  293   cd /run/media/brilliant/Brilliant/Software/Wine
+  294   cd /run/media/brilliant/Brilliant/Software/Wine/Windows
+  295   cd /home/brilliant/Downloads
+  296   cd /run/media/brilliant/Brilliant/Software/Wine/Windows
+  297   cd /home/brilliant/Downloads
+  298   cd /home/brilliant/Desktop
+  299   cd /run/media/brilliant/Brilliant/Software/Wine/Windows
+  300   cd /home/brilliant/Desktop
+  301   cd /run/media/brilliant/Brilliant/Software/Wine/Windows
+  302   cd /run/media/brilliant/Brilliant/Software/Wine
+  303   cd /run/media/brilliant/Brilliant/Software
+  304   cd /run/media/brilliant/Brilliant
+  305   cd /run/media/brilliant/Brilliant/Software
+  306   cd /run/media/brilliant/Brilliant/Software/Wine
+  307   cd /home/brilliant/Desktop
+  308   cd /home/brilliant/Downloads
+  309   cd /home/brilliant/Downloads/Music
+  310   cd /home/brilliant/Downloads
+  311   cd /home/brilliant/Downloads/Music
+  312   cd /home/brilliant/Downloads
+  313   cd /run/media/brilliant/Brilliant/Software
+  314   cd /home/brilliant
+  315   cd /home/brilliant/Musics
+  316   cd /home/brilliant/Downloads
+  317   cd '/home/brilliant/Downloads/Torrents/The Zen of You'
+  318   cd /run/media/brilliant/Brilliant/Software/Wine
+  319   cd /run/media/brilliant/Brilliant/Software
+  320   cd '/home/brilliant/Downloads/Torrents/The Zen of You'
+  321   cd /home/brilliant/Downloads/Torrents
+  322   cd /home/brilliant/Downloads
+  323   cd /home/brilliant/Documents
+  324   cd /home/brilliant/Downloads
+  325   cd '/home/brilliant/Downloads/Torrents/Peter and Andrew Schiff - How An Economy Grows And Why It Crashes (Unb)'
+  326   cd /home/brilliant/Downloads/Torrents
+  327   cd '/home/brilliant/Downloads/Torrents/Peter and Andrew Schiff - How An Economy Grows And Why It Crashes (Unb)'
+  328   cd /home/brilliant/Downloads
+  329  rm -rf *.jpg
+  330  cd Telegram\ Desktop/
+  331  rm -rf *.JPG
+  332   cd /home/brilliant/Downloads
+  333   cd /home/brilliant
+  334  clear
+  335  bash <(curl -s https://repo.koompi.org/piwin/office_2013/office_2013.sh)
+  336   cd /run/media/brilliant/Brilliant
+  337   cd /run/media/brilliant/Brilliant/Projects
+  338   cd /run/media/brilliant/Brilliant/Projects/web_development
+  339   cd '/run/media/brilliant/Brilliant/Projects/web_development/rithythul.com/*'
+  340   cd /run/media/brilliant/Brilliant/Projects/web_development/rithythul.com
+  341  ./init.sh 
+  342  code .
+  343   cd /run/media/brilliant/Brilliant
+  344   cd /run/media/brilliant/Brilliant/Projects
+  345   cd /run/media/brilliant/Brilliant/Projects/web_development
+  346   cd /run/media/brilliant/Brilliant/Projects/web_development/rithythul.com
+  347   cd /run/media/brilliant/Brilliant/Projects/web_development/rithythul.com/src
+  348   cd /run/media/brilliant/Brilliant/Projects/web_development/rithythul.com
+  349  ip al
+  350  ip a
+  351  docker-compose up
+  352  docker-compose up -d
+  353  ./check_if_package_installed.sh 
+  354  ./check_if_package_installed.sh 
+  355  clear
+  356  ./check_if_package_installed.sh 
+  357  ./check_if_package_installed.sh firefox
+  358  ./check_if_package_installed.sh firefoxs
+  359  pacman -Qi firefox
+  360  pacman -Qi firefoxs
+  361  pacman -Qi firefox &> /dev/null
+  362  pacman -Qi firefox &> /dev/null | echo $?
+  363  pacman -Qi firefoxs &> /dev/null | echo $?
+  364  pacman -Qi firefoxs &> /dev/null | echo $?
+  365  pacman -Qi firefox &> /dev/null | echo $?
+  366  clear
+  367  ./check_if_package_installed.sh firefox
+  368  ./check_if_package_installed.sh firefoxs
+  369  clear
+  370  curl -s https://repo.koompi.org/piwin/office_2013/office_2013.sh -o office_2013.sh
+  371  sudo pacman -Qi wine-stable
+  372  sudo pacman -Qi wine
+  373  sudo pacman -Qi wine | grep "Depends On"
+  374  clear
+  375  chmod +x wine_dep.sh 
+  376  cler
+  377  clear
+  378  ./wine_dep.sh 
+  379  clear
+  380  pacman -Qi wine-stable
+  381  clear
+  382  chmod +x wine_opt_deps.sh 
+  383  clear
+  384  ./wine_opt_deps.sh 
+  385  clear
+  386  ./wine_opt_deps.sh 
+  387  clear
+  388  ./wine_dep.sh 
+  389  clear
+  390  git status
+  391  git add .
+  392  git commit -m "update"
+  393  git push
+  394  ./piwin -v
+  395  ./piwin -u
+  396  clear
+  397  ./check_if_package_installed.sh 
+  398  clear
+  399  ./check_if_package_installed.sh 
+  400  ./check_if_package_installed.sh 
+  401  sudo pacman -Qi google-chrome-stable
+  402  sudo pacman -Qi google-chrome
+  403  pacman -Qi pidgin|grep <STRING_THAT_MEANS_"DEPENDS_ON"_IN_YOUR_NATIVE_LANGUAGE>|cut -d: -f2
+  404  pacman -Qi pidgin|grep "DEPENDS_ON"|cut -d: -f2
+  405  pacman -Qi google-chrome|grep "DEPENDS_ON"|cut -d: -f2
+  406  sudo pacman -Qi google-chrome|grep "DEPENDS_ON"|cut -d: -f2
+  407  sudo pacman -Qi google-chrome | grep "DEPENDS_ON" | cut -d: -f2
+  408  sudo pacman -Qi
+  409  clear
+  410  sudo pacman -Qi google-chrome
+  411  sudo pacman -Qi google-chrome | grep "DEPENDS_ON"
+  412  sudo pacman -Qi google-chrome 
+  413  sudo pacman -Qi google-chrome | grep "Depends On"
+  414  sudo pacman -Qi google-chrome | grep "Depends On" | cut -d: -f2
+  415  sudo pacman -Qi google-chrome | grep "Optional Deps" | cut -d: -f2
+  416  sudo pacman -Qi google-chrome | grep "Optional Deps" | cut -d:
+  417  cut --help
+  418  sudo pacman -Qi google-chrome | grep "Optional Deps" | cut -d:
+  419  sudo pacman -Qi google-chrome | grep "Optional Deps" | cut -d: -f
+  420  sudo pacman -Qi google-chrome | grep "Optional Deps" | cut -d: -f2
+  421  sudo pacman -Qi google-chrome | grep "Optional Deps" | cut -d: -f10
+  422  sudo pacman -Qi google-chrome | grep "Optional Deps" | cut -d: -f3
+  423  sudo pacman -Qi google-chrome | grep "Optional Deps" | cut -d: -f1
+  424  sudo pacman -Qi google-chrome | grep "Optional Deps" | cut -d: -f2
+  425  sudo pacman -Qi google-chrome | grep "Optional Deps" 
+  426  sudo pacman -Qi
+  427  sudo pacman -Qi google-chrome
+  428  clear
+  429  ./check_if_package_installed.sh 
+  430  yay -S awk
+  431  yay -S gsub
+  432  clear
+  433  yay -S gsub
+  434  ./check_if_package_installed.sh 
+  435  clear
+  436  ./check_if_package_installed.sh 
+  437  clear
+  438  ./check_if_package_installed.sh 
+  439  yay -S pactree
+  440  clear
+  441  pacman -Qii google-chrome
+  442  pacman -Qii google-chrome-stable
+  443  pacman -Qii firefox
+  444  pacman -Qii mesa
+  445  clear
+  446  ./check_if_package_installed.sh 
+  447  clear
+  448  ./check_if_package_installed.sh 
+  449  claer
+  450  clear
+  451  ./check_if_package_installed.sh 
+  452  clear
+  453  ./check_if_package_installed.sh 
+  454  clear
+  455  ./check_if_package_installed.sh 
+  456  pacman -Qi firefoxs
+  457  clear
+  458  pacman -Qi firefoxs
+  459  ./check_if_package_installed.sh 
+  460  clear
+  461  ./check_if_package_installed.sh 
+  462  ./check_if_package_installed.sh 
+  463  clear
+  464  ./check_if_package_installed.sh 
+  465  clear
+  466  ./check_if_package_installed.sh 
+  467  ./check_if_package_installed.sh 
+  468  ./check_if_package_installed.sh 
+  469  ./check_if_package_installed.sh 
+  470  clear
+  471  ./check_if_package_installed.sh 
+  472  ./check_if_package_installed.sh 
+  473  ./check_if_package_installed.sh 
+  474  which atom
+  475  yay -R atom
+  476  clear
+  477  ./check_if_package_installed.sh 
+  478  celar
+  479  clear
+  480  ./check_if_package_installed.sh 
+  481  clear
+  482  ./check_if_package_installed.sh 
+  483  clear
+  484  ./check_if_package_installed.sh 
+  485  clear
+  486  ./check_if_package_installed.sh 
+  487  clear
+  488  ./check_if_package_installed.sh 
+  489  clear
+  490  ./check_if_package_installed.sh 
+  491  clear
+  492  ./check_if_package_installed.sh 
+  493  cd /etc/nginx/
+  494  sudo_code .
+  495  cd Projects/piwin/
+  496  clear
+  497  code .
+  498  pacman -Qi firefox
+  499  pacman -Qi mesa
+  500  pacman -Qi lib32-mesa
+  501  cd projects/piwin/
+  502  clear
+  503  code .
+  504  ip a
+  505  sudo pacman -S ufw
+  506  sudo ufw status
+  507  sudo ufw enable
+  508  sudo ufw status
+  509  sudo ufw allow from 192.168.1.110 to any port 22
+  510  sudo ufw status
+  511  sudo ufw delete from 192.168.1.110 to any port 22
+  512  sudo ufw delete from 192.168.1.110 to any port 22
+  513  sudo ufw status
+  514  sudo ufw deny from 192.168.1.110 to any port 22
+  515  sudo ufw status
+  516  sudo ufw delete from 192.168.1.110 to any port 22
+  517  sudo ufw delete allow from 192.168.1.110 to any port 22
+  518  sudo ufw delete allow from 192.168.1.110 to any port 22
+  519  sudo ufw status
+  520  sudo ufw delete allow port 22
+  521  sudo ufw  allow port 80
+  522  sudo ufw allow to any port 80
+  523  sudo ufw status
+  524  sudo ufw allow to any port 443
+  525  sudo ufw status
+  526  sudo ufw disable
+  527  sudo ufw status
+  528  docker ps
+  529  sudo ufw enable
+  530  sudo ufw status
+  531  sudo ufw  delete allow to any port 443
+  532  sudo ufw allow to any port 443
+  533  sudo ufw allow to any port 3000
+  534  sudo ufw allow to any port 5432
+  535  sudo ufw delete allow to any port 5432
+  536  sudo ufw delete allow to any port 54320
+  537  sudo ufw allow to any port 54320
+  538  sudo ufw allow to any port 54320
+  539  sudo ufw delete allow to any port 54320
+  540  sudo ufw allow from 192.168.1.120 to any port 54320
+  541  sudo ufw delete allow from 192.168.1.120 to any port 54320
+  542  sudo ufw allow to any port 54320
+  543  history > rule.txt

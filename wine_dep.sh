@@ -1,5 +1,6 @@
 #!/bin/bash
-WINE_MAIN_DEPS=("desktop-file-utils"  
+WINE_MAIN_DEPS=(
+                "desktop-file-utils"  
                 "fontconfig"  
                 "freetype2"  
                 "gettext"  
